@@ -12,7 +12,7 @@ principal author: Kevin Sucker
 
 The rev limiter based on the ATmega328P like the Arduino Uno Board. For use the fastest PWM Output wich is possible with the ATmega328P i choosed a 20 MHz quatz (Arduino uses 16 MHz).
 
-The rev limiter works by simulating a lower value of the real throttle valve.
+The rev limiter works by simulating a lower value of the real throttle valve. The rev limiter is built between the throttle and the ECU
 
 How much the rev limiter should limit the speed can be set using a teach button.
 
