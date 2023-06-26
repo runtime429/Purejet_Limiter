@@ -16,7 +16,9 @@ The rev limiter works by simulating a lower value of the real throttle valve. Th
 
 How much the rev limiter should limit the speed can be set using a teach button.
 
-The RPM limit can be bypassed using a 433MHz remote control or a Switch.
+The RPM limit can be bypassed using for example cheap 433MHz remote control (http://aliexpress.com/item/1005003558907008.html) or a Switch.
+
+
 
 
 
