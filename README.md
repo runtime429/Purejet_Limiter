@@ -28,7 +28,16 @@ I have implemented a bypass feature that can disable the RPM limit when necessar
 
 ![Back](https://raw.githubusercontent.com/runtime429/Purejet_Limiter/main/img/Back.png)
 
+# How to flash the Board
 
+- Add the [MiniCore](https://github.com/MCUdude/MiniCore) to your Arduino IDE
+- Tools -> Bootloader -> No Bootloader
+        -> Clock -> external 20Mhz
+- Choose your ISP Programmer
+- Download the [RCSwitch](https://github.com/sui77/rc-switch)-library from the arduino library manager
+- Connect to the ISP Pins on the Board
+- Burn Bootloader to set the Fuse-Bits
+- Upload Using Programmer
 
 
 
