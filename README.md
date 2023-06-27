@@ -20,5 +20,13 @@ The RPM limit can be bypassed using for example a cheap 433MHz remote control (h
 
 
 
+# 3D printable housing
+
+![Front View](https://raw.githubusercontent.com/runtime429/Purejet_Limiter/main/img/Housing.png)
+
+![Back](https://raw.githubusercontent.com/runtime429/Purejet_Limiter/main/img/Back.png)
+
+
+
 
 
