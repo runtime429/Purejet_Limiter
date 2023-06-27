@@ -39,5 +39,6 @@ I have implemented a bypass feature that can disable the RPM limit when necessar
 - Burn Bootloader to set the Fuse-Bits
 - Upload Using Programmer
 
+# Board Installation How-To
 
-
+# Set up the Rev Limiter
