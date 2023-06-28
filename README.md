@@ -28,6 +28,10 @@ I have implemented a bypass feature that can disable the RPM limit when necessar
 
 ![Back](https://raw.githubusercontent.com/runtime429/Purejet_Limiter/main/img/Back.png)
 
+# Etching the board
+
+
+
 # How to flash the Board
 
 - Add the [MiniCore](https://github.com/MCUdude/MiniCore) to your Arduino IDE
