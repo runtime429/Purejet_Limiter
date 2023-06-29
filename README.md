@@ -28,11 +28,13 @@ I have implemented a bypass feature that can disable the RPM limit when necessar
 
 ![Back](https://raw.githubusercontent.com/runtime429/Purejet_Limiter/main/img/Back.png)
 
-# Etching the board
+# Etching the board and PCB assembly
 
 Thanks to [Tobias Link on Youtube](https://youtu.be/-L1i9SnYGaU) for his excellent Tutorial!
 
 Checkout [Build_PCB.md](https://github.com/runtime429/Purejet_Limiter/blob/main/PCB_make/Build_PCB.md)
+
+![4](https://raw.githubusercontent.com/runtime429/Purejet_Limiter/main/PCB_make/IMG_20230628_184607.jpg)
 
 # How to flash the Board
 
