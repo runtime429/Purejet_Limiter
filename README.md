@@ -1,6 +1,6 @@
 # Purejet_Limiter
 
-!!! The current design has not yet been tested. !!!
+!!! The current design is being worked on and it´s not yet been tested yet. !!!
 
 This repository contains hardware a hardware design and software for a rev limiter for Ditech / Purejet Scooter.
 
