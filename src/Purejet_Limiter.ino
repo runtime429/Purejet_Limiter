@@ -1,11 +1,11 @@
 #include <EEPROM.h>
 #include <RCSwitch.h>
 
-const int TPSo1 = 9;    // OUTPUT TO TPS
-const int TPSo2 = 10;   // OUTPUT TO TPS
+const int TPSo1 = 10;    // OUTPUT TO TPS
+const int TPSo2 = 9;   // OUTPUT TO TPS
 
-const byte TPSi1 = A1;  // INPUT OF TPS
-const byte TPSi2 = A0;  // INPUT OF TPS
+const byte TPSi1 = A0;  // INPUT OF TPS
+const byte TPSi2 = A1;  // INPUT OF TPS
 
 const int receivePin = 1;     // Remote receive interrupt Pin
 const int valRcSig = 4433;    // Value of rc remote signal for receive
@@ -28,9 +28,8 @@ int adc0, adc1;           // variables to read input of TPS
 int adcsetup0, adcsetup1; // variables to read input of TPS on Setup
 
 int maxadc0 = 0;        // lowest value in teach mode
-int maxadc1 = 1024;     // highest value in teach mode
 
-int revlv1, revlv2;     // variables of Voltage limiter to ECU
+int revlv1; // variables of Voltage limiter to ECU
 float limitfactor;      // Limit factor to output
 
 RCSwitch mySwitch = RCSwitch();
@@ -51,19 +50,18 @@ void setup() {
   
   Serial.begin(115200);
   revlv1 = read_int(0);     // read value of TPS1 limit from EEPROM
-  revlv2 = read_int(2);     // read value of TPS2 limit from EEPROM
 
 
   mySwitch.enableReceive(receivePin); // Receiver on interrupt 0 => that is pin #2
 
 
-  limitfactor = (100.00 / map(revlv1, adcsetup0, adcsetup1, 0, 100) + 1);
+  limitfactor = (100.00 / map(revlv1, adcsetup0, adcsetup1, 0, 100) + 2);
 
   digitalWrite(LED_BUILTIN, HIGH);   // turn the LED on (HIGH is the voltage level)
   delay(1000);                       // wait for a second
   digitalWrite(LED_BUILTIN, LOW);    // turn the LED off by making the voltage LOW
 
-  while (TPSi1 < TPSi2) {   // TPS Signal is twisted
+  while (adcsetup0 > adcsetup1) {   // TPS Signal is twisted
   blinkLED(100, 100);     // LED blinks on for 100 milliseconds, then off for 100 milliseconds
   blinkLED(500, 500);     // LED blinks on for 500 milliseconds, then off for 500 milliseconds
 }
@@ -78,7 +76,6 @@ void loop() {
   
   if (ledState == HIGH) {
     if (maxadc0 < adc0) maxadc0 = adc0;
-    if (maxadc1 > adc1) maxadc1 = adc1;
   }
   
   if (valrc != valRcSig) {
@@ -96,7 +93,6 @@ void loop() {
     analogWrite(TPSo2, (adcsetup1 - (adcsetup1 - adc1) / limitfactor) / 4);
   }
  
-
 }
 
 void received_remote() {
@@ -121,8 +117,6 @@ void write_int(int address, int value) {
   Serial.print("Write to EEPROM (Address: ");
   Serial.print(address);
   Serial.print(",");
-  Serial.print(address + 1);
-  Serial.print("):");
   Serial.println(value);
 }
 
@@ -133,8 +127,6 @@ int read_int(int address) {
   Serial.print("Read from EEPROM (Address: ");
   Serial.print(address);
   Serial.print(",");
-  Serial.print(address + 1);
-  Serial.print("):");
   Serial.println(val);
   return val;
 }
@@ -165,12 +157,9 @@ void teach_tps_toggle() {
           Serial.println("Teaching TRUE");
         } else {
           write_int(0, maxadc0);
-          write_int(2, maxadc1);
           maxadc0 = 0;            // reset to lowest value in teach mode for next teach
-          maxadc1 = 1024;         // reset to highest value in teach mode for next teach
           Serial.println("Teaching End");
           revlv1 = read_int(0);     // read value of TPS1 limit
-          revlv2 = read_int(2);     // read value of TPS2 limit
           Serial.println("Set new values from EEPROM to var");
           limitfactor = (100.00 / map(revlv1, adcsetup0, adcsetup1, 0, 100) + 1);
           Serial.print("Set limitfactor:");
