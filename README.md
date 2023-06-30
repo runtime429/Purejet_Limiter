@@ -59,3 +59,7 @@ Checkout [Build_PCB.md](https://github.com/runtime429/Purejet_Limiter/blob/main/
 
 
 # Set up the Rev Limiter
+
+Look at YouTube:
+
+[![Rev (Speed) Limiter for Piaggio Gilera Aprilia - Purejet / Ditech](https://img.youtube.com/vi/lKDDaW2R90E/hqdefault.jpg)](https://www.youtube.com/watch?v=lKDDaW2R90E)
