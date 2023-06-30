@@ -47,6 +47,11 @@ Checkout [Build_PCB.md](https://github.com/runtime429/Purejet_Limiter/blob/main/
 - Burn Bootloader to set the Fuse-Bits
 - Upload Using Programmer
 
-# Board Installation How-To
+# Limiter Installation on Scooter How-To
+
+![Connector](https://raw.githubusercontent.com/runtime429/Purejet_Limiter/main/wiring/ECU_Connector.png)
+
+![Wiring](https://raw.githubusercontent.com/runtime429/Purejet_Limiter/main/wiring/Wire_Piaggio.png)
+
 
 # Set up the Rev Limiter
