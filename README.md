@@ -46,9 +46,9 @@ Checkout [Build_PCB.md](https://github.com/runtime429/Purejet_Limiter/blob/main/
 - Connect to the ISP Pins on the Board
 - Burn Bootloader to set the Fuse-Bits
 - Upload Sketch Using Programmer
-- press any key of your 433MHz remote
-- you can read the value of yor 433MHz signal on the TX Uart pin (Baud 115200), I copiet the Signal from a [cheep 433MHz wireless socket remote](https://github.com/runtime429/Purejet_Limiter/blob/main/img/433_remote.png)
-- change the value of the "const int valRcSig", in my case to 21777
+- Press any key of your 433MHz remote
+- You can read the value of yor 433MHz signal on the TX Uart pin (Baud 115200), I copiet the Signal from a [cheep 433MHz wireless socket remote](https://github.com/runtime429/Purejet_Limiter/blob/main/img/433_remote.png)
+- Change the value of the "const int valRcSig", in my case to 21777
 - Repload Sketch Using Programmer
 
 # Limiter Installation on Scooter How-To
