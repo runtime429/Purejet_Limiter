@@ -53,6 +53,8 @@ Checkout [Build_PCB.md](https://github.com/runtime429/Purejet_Limiter/blob/main/
 
 ![Connector](https://raw.githubusercontent.com/runtime429/Purejet_Limiter/main/wiring/ECU_Connector.png)
 
+![Pin Description](https://raw.githubusercontent.com/runtime429/Purejet_Limiter/main/wiring/Pin_Description_Board.png)
+
 ![Wiring](https://raw.githubusercontent.com/runtime429/Purejet_Limiter/main/wiring/Wire_Piaggio.png)
 
 
