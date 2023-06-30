@@ -8,7 +8,7 @@ const byte TPSi1 = A0;  // INPUT OF TPS
 const byte TPSi2 = A1;  // INPUT OF TPS
 
 const int receivePin = 1;     // Remote receive interrupt Pin
-const int valRcSig = 4433;    // Value of rc remote signal for receive
+const int valRcSig = 21777;    // Value of rc remote signal for receive
 
 bool rcSwitch = false;        // State of rc Switch
 int valrc = 0;                // Value of remote signal if no Signal received
