@@ -161,7 +161,7 @@ void teach_tps_toggle() {
           Serial.println("Teaching End");
           revlv1 = read_int(0);     // read value of TPS1 limit
           Serial.println("Set new values from EEPROM to var");
-          limitfactor = (100.00 / map(revlv1, adcsetup0, adcsetup1, 0, 100) + 1);
+          limitfactor = (100.00 / map(revlv1, adcsetup0, adcsetup1, 0, 100) + 2);
           Serial.print("Set limitfactor:");
           Serial.println(limitfactor);
         }
